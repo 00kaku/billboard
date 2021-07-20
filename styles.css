@@ -1,0 +1,156 @@
+/**
+* Global Styles
+**/
+
+h1,h2,h3,h4,h5,h6,p {
+	margin:0;
+}
+
+/**
+* .bllboard Container Styles
+**/
+.billboard{
+	max-width: 1580px;
+	margin:auto;
+}
+
+/**
+* '.billboard__categories' Categories and tab selector Styles
+**/
+.billboard__categories {
+	text-align: center;
+	background-color: #edebeb;
+	padding-top: 53px;
+	padding-bottom: 73px;
+}
+
+.billboard__categories h2 {
+	margin-bottom: 17px;
+}
+
+.billboard__categories-tab {
+	padding: 15px;
+	margin-right: 27px;
+	background: #ffffff 0% 0% no-repeat padding-box;
+	opacity: 1;
+	border: none;
+	letter-spacing: 2.25px;
+	color: #292929;
+	text-transform: uppercase;
+	opacity: 1;
+}
+
+.billboard__categories-tab.active {
+	background-color: #101119;
+	color: #fff;
+}
+
+.billboard__categories-tab:hover {
+	cursor: pointer;
+}
+
+/**
+* '.billboard__posts' Posts Styles
+**/
+.billboard__posts{
+	background-color: #CFD5E6;
+	position: relative;
+	padding-bottom: 75px;
+	padding-top: 47px;
+}
+
+.billboard__post{
+	display: flex;
+}
+
+/**
+* Featured post styles.
+**/
+.billboard__post:first-child{
+	background-color: #fff;
+	flex-direction: column;
+	max-width: 630px;
+	position: absolute;
+	left: 158px;
+	top: -40px;
+}
+
+.billboard__post:first-child .billboard__post-text {
+	margin: 30px;
+}
+
+.billboard__post-text h4 span{
+	position: relative;
+    padding-bottom: 5px;
+}
+
+.billboard__post-text h4 span::after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 3px solid #1A48C4;
+    content: ""
+}
+
+.billboard__post:first-child .billboard__post-text p:nth-of-type(1){
+	font: normal normal normal 31px/41px 'Neue Haas Grotesk Display Pro';
+	margin-top: 10px;
+	letter-spacing: 0.93px;
+	margin-bottom: 12px;
+}
+
+.billboard__post:first-child .billboard__post-text p:nth-of-type(n+2){
+	font: normal normal medium 12px/18px 'Neue Haas Grotesk Display Pro';
+	letter-spacing: 0.57px;
+	color: #4B5471;
+
+}
+
+.billboard__post:first-child img{
+	width: 100%;
+}
+
+
+/**
+* Non Featured post styles.
+**/
+.billboard__post:not(:first-child){
+	background-color: #fff;
+	font-size: 14px;
+	letter-spacing: 0.54;
+	margin-right: 157px;
+	margin-left: 830px;
+	margin-bottom: 21px;
+	overflow: hidden;
+}
+
+.billboard__post:not(:first-child) img {
+	max-width: 212px;
+	width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+	object-fit: cover;
+}
+
+.billboard__post:not(:first-child) .billboard__post-text {
+	margin: 30px  20px 23px 20px;
+}
+
+.billboard__post:not(:first-child) .billboard__post-text p:first-child {
+	margin-bottom: 12px;
+	font: normal normal normal 18px/24px 'Neue Haas Grotesk Display Pro';
+	letter-spacing: 0.54px;
+}
+
+.billboard__post:not(:first-child) .billboard__post-text p:not(:first-child){
+	font: normal normal medium 12px/18px 'Neue Haas Grotesk Display Pro';
+	letter-spacing: 0.57px;
+	color: #4B5471;
+	opacity: 1;
+}
+
+.billboard__post:not(:first-child) .billboard__post-image {
+	max-height: 140px;
+}
