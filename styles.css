@@ -1,8 +1,8 @@
 /**
 * ############# Global Styles ###########################
 **/
-body{
-	margin:0px;
+body {
+	margin: 0px;
 }
 
 h1,
@@ -36,7 +36,7 @@ p {
 .billboard__categories h2 {
 	margin-bottom: 17px;
 	text-align: center;
-	font: normal normal bold 37px/39px 'Neue Haas Grotesk Display Pro Bold';
+	font: normal normal bold 37px/39px "Neue Haas Grotesk Display Pro Bold";
 	letter-spacing: 0.74px;
 	color: #101119;
 	text-transform: capitalize;
@@ -53,6 +53,14 @@ p {
 	text-transform: uppercase;
 }
 
+.billboard__categories-tab:first-child {
+	margin-left: 14px;
+}
+
+.billboard__categories-tab:last-child{
+	margin-right: 14px;
+}
+
 .billboard__categories-tab.active {
 	background-color: #101119;
 	color: #fff;
@@ -63,10 +71,32 @@ p {
 }
 
 /** Media queries for breakpoints **/
-@media screen and (max-width: 1259px) and (min-width:1000px){
-	.billboard__categories  {
+@media screen and (max-width: 1259px)  {
+	.billboard__categories {
 		padding-bottom: 30px;
 		background-color: #cfd5e6;
+	}
+}
+
+@media screen and (max-width: 999px) {
+	.billboard__categories-tabs {
+		display: flex;
+		overflow: auto;
+		max-width: fit-content;
+		margin: auto;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	.billboard__categories-tabs::-webkit-scrollbar {
+		display: none;
+	}
+
+	.billboard__categories-tab {
+		font: normal normal 900 13px/23px 'Neue Haas Grotesk Display Pro';
+		letter-spacing: 1.95px;
+		height: max-content;
+		white-space: nowrap;
 	}
 }
 
@@ -85,11 +115,20 @@ p {
 }
 
 /** Media queries for breakpoints **/
-@media screen and (max-width: 1259px) and (min-width:1000px){
-	.billboard__posts{
+@media screen and (max-width: 1259px) {
+	.billboard__posts {
 		padding-top: 0px;
 	}
 }
+
+@media screen and (max-width: 999px) {
+	.billboard__posts {
+		display: grid;
+		overflow-x: auto;
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
 /**
 * ######################### Featured post styles. ######################################
 **/
@@ -98,7 +137,7 @@ p {
 	flex-direction: column;
 	max-width: 630px;
 	position: absolute;
-	left: 158.5px;
+	left: 10%;
 	top: -40px;
 }
 
@@ -139,11 +178,24 @@ p {
 }
 
 /** Media queries for breakpoints **/
-@media screen and (max-width: 1259px) and (min-width:1000px){
+@media screen and (max-width: 1259px) and (min-width: 1000px) {
 	.billboard__post:first-child {
 		max-width: 457px;
 		left: 21px;
 		top: 0;
+	}
+}
+
+@media screen and (max-width: 999px) {
+	.billboard__post:first-child {
+		max-width: calc(100vw - 30px);
+		left: 15px;
+		top: 0;
+		position: sticky;
+		grid-column: 1 / -1;
+	}
+	.billboard__post:first-child .billboard__post-text {
+		margin: 20px 6px 20px 24px;
 	}
 }
 
@@ -154,8 +206,8 @@ p {
 	background-color: #fff;
 	font-size: 14px;
 	letter-spacing: 0.54;
-	margin-right: 157px;
-	margin-left: 833.5px;
+	margin-right: 9%;
+	margin-left: calc(10% + 675px);
 	margin-bottom: 21px;
 	overflow: hidden;
 }
@@ -190,14 +242,38 @@ p {
 }
 
 /** Media queries for breakpoints **/
-@media screen and (max-width: 1259px) and (min-width:1000px){
+@media screen and (min-width: 1259px) and (max-width: 1580px) {
+	.billboard__post:not(:first-child) {
+		margin-right: 3%;
+	}
+}
+@media screen and (max-width: 1259px) and (min-width: 1000px) {
 	.billboard__post:not(:first-child) {
 		margin-right: 20px;
 		margin-left: 500px;
 	}
 
 	.billboard__post:not(:first-child) .billboard__post-text p:last-child {
-		display: none	;
+		display: none;
+	}
+}
+
+@media screen and (max-width: 999px) {
+	.billboard__post:not(:first-child) {
+		margin: 0;
+		width: 211px;
+		max-width: 211px;
+		flex-direction: column;
+		margin-top: 20px;
+		margin-right: 6px;
+		margin-left: 15px;
 	}
 
+	.billboard__post:not(:first-child) img{
+		height: 140px;
+	}
+
+	.billboard__post:not(:first-child) .billboard__post-text {
+		margin: 18px 18px 20px 15px;
+	}
 }
