@@ -37,8 +37,8 @@ function updatePosts(posts) {
 							<div class="billboard__post-text">
 								${ index === 0 ? `<h4><span>${post.category}</span></h4>` : '' }
 								<p>${post.heading}</p>
-								<p>${post.publish}</p>
 								<p>${post.author}</p>
+								<p>${post.publish}</p>
 							</div>`;
 		var htmlObject = document.createElement('div');
 		htmlObject.classList.add('billboard__post');

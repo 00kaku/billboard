@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src:url("NeueHaasDisplayRoman.woff");
+}
+
+@font-face {
+	font-family: "Neue Haas Grotesk Display Pro Bold";
+	src: url("NeueHaasDisplayBold.woff");
+  }
