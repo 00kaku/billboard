@@ -26,8 +26,8 @@ function fetchPosts(event) {
 
 function updatePosts(posts) {
 	const container = document.querySelector(".billboard__posts");
-	while (container.firstChild) {
-	  container.removeChild(container.lastChild);
+	while (container.childNodes.length > 2) {
+	  container.removeChild(container.firstChild);
 	}
 
 	posts.map( (post, index) => {
@@ -43,6 +43,6 @@ function updatePosts(posts) {
 		var htmlObject = document.createElement('div');
 		htmlObject.classList.add('billboard__post');
 		htmlObject.innerHTML=htmlString;
-		document.querySelector(".billboard__posts").insertAdjacentElement('beforeend', htmlObject);
+		document.querySelector(".billboard__cta").insertAdjacentElement('beforebegin', htmlObject);
 	})
 }
